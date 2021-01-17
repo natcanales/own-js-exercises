@@ -22,3 +22,14 @@
           You can Google anything you need :)
 
 *****************************************************************************/
+
+const lista = [];
+
+lista.unshift(3);
+lista.push(17);
+lista.unshift(26);
+lista.push(20);
+lista.splice(3, 0, 8);
+lista.splice(3, 0, 11);
+
+console.log(lista);

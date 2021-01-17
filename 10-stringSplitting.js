@@ -15,3 +15,12 @@
         Rating
 
 *****************************************************************************/
+
+let nouns = "title, author, year, rating";
+let separatedNouns = nouns.split(", ");
+
+for (let i = 0; i < separatedNouns.length; i++) {
+    let string = separatedNouns[i];
+    string = string[0].toUpperCase() + string.slice(1);
+    console.log(string);
+}

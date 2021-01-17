@@ -19,3 +19,18 @@
             });
 
 *****************************************************************************/
+
+let numbers = [95, 40, 26, 3, 17, 23, 71, 89, 100, 34, 24, 81, 56, 44, 15];
+let evenNumbers = [];
+let oddNumbers = [];
+
+numbers.forEach(element => {
+    if (element % 2 === 0) {
+        evenNumbers.push(element);
+    } else {
+        oddNumbers.push(element);
+    }
+});
+
+console.log(`Even numbers are: ${evenNumbers}.`);
+console.log(`Odd numbers are: ${oddNumbers}.`);

@@ -28,3 +28,15 @@
           you only need one loop to create the correct pairs.
 
 *****************************************************************************/
+
+let firstString = "title, author, year, rating";
+let secondString = "Harry Potter and the Sorcerer's Stone, J. K. Rowling, 1997, 8.5";
+
+let firstArray = firstString.split(", ");
+let secondArray = secondString.split(", ");
+
+for (let i = 0; i < firstArray.length; i++) {
+    let bookAttribute = firstArray[i];
+    bookAttribute = bookAttribute[0].toUpperCase() + bookAttribute.slice(1);
+    console.log(`- ${bookAttribute}: ${secondArray[i]}`);
+}

@@ -16,7 +16,7 @@
         }
 
     The same as you did in the previous exercise can be used to
-    create this object. Just start by creating and empty object
+    create this object. Just start by creating an empty object
     and fill its information while looping through each property
     name.
 
@@ -26,3 +26,18 @@
           to help you find a way to achieve this.
 
 *****************************************************************************/
+
+let filmAttributes = "title, director, year, rating";
+let filmData = "Inception, Christopher Nolan, 2010, 8.8";
+
+const film = {};
+
+filmAttributes = filmAttributes.split(", ");
+filmData = filmData.split(", ");
+
+for (let i = 0; i < filmAttributes.length; i++) {
+    film[filmAttributes[i]] = filmData[i];
+}
+
+film.year = parseInt(film.year);
+film.rating = parseFloat(film.rating);

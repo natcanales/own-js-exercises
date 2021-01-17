@@ -11,3 +11,23 @@
           the loop you used.
 
 *****************************************************************************/
+
+/* let oddNumbers = [];
+
+for (let i = 0; i < 26; i++) {
+    if (i % 2 !== 0) {
+        oddNumbers.unshift(i);
+    }
+}
+
+console.log(oddNumbers); */
+
+let oddNumbers = [];
+
+for (let i = 25; i > 0; i--) {
+    if (i % 2 !== 0) {
+        oddNumbers.push(i);
+    }
+}
+
+console.log(oddNumbers);

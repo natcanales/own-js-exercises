@@ -15,3 +15,12 @@
           the strings' .split() method works.
 
 *****************************************************************************/
+
+let loveString = "I love you!";
+const loveArray = loveString.split("");
+
+/* for (let i = 0; i < loveString.length; i++) {
+    loveArray.push(loveString[i]);
+} */
+
+console.log(loveArray);

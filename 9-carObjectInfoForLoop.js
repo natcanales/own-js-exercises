@@ -20,3 +20,14 @@
         - ALIAS: Kristine
 
 *****************************************************************************/
+
+const car = {
+    brand: "KIA",
+    model: "Rio",
+    plate: "7548KRS",
+    alias: "Kristine"
+};
+
+for (key in car) {
+    console.log(`- ${key.toUpperCase()}: ${car[key]}`);
+}
