@@ -22,3 +22,16 @@
     Feel free to modify what you need to see both outputs.
 
 *****************************************************************************/
+
+const address = {
+    address: "Calle Montañita de las Rapaces, 2",
+    postalCode: "26317",
+    city: "Toandsing",
+    country: "Spain"
+}
+
+if (address.hasOwnProperty("alias")) {
+    console.log(`The house has an alias! It is "${address.alias}"`);
+} else {
+    console.log("The house does not have an alias yet!");
+}
