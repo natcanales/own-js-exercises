@@ -40,3 +40,15 @@
     is really important to master nested loops :)
 
 *****************************************************************************/
+
+const array1 = [];
+
+for (let i = 0; i < 10; i++) {
+    let array2 = [];
+    for (let j = 0; j < 10; j++) {
+        array2.push("");
+    }
+    array1.push(array2);
+}
+
+console.log(array1);
