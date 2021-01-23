@@ -32,3 +32,32 @@
         The average of the array is 0
 
 *****************************************************************************/
+
+function average(numbers) {
+    let totalSum = 0;
+    let numNumbers = 0;
+    let totalAverage;
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (typeof(numbers[i]) === "number") {
+            totalSum += numbers[i];
+            numNumbers++;
+        }
+    }
+    if (numNumbers !== 0) {
+        totalAverage = totalSum / numNumbers;
+    } else {
+        totalAverage = 0;
+    }
+    
+    return totalAverage.toFixed(2);
+}
+
+let solution = average([1, 2, 3, "hello", 4]);
+console.log(`The average of the array is ${solution}`);
+
+solution = average([26.3, 11.8, 17.2, 52.8, 49.1]);
+console.log(`The average of the array is ${solution}`);
+
+solution = average(["hello", "goodbye"]);
+console.log(`The average of the array is ${solution}`);

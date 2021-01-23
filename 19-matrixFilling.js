@@ -27,3 +27,23 @@
     the array's positions specify.
 
 *****************************************************************************/
+
+const matrix = [];
+
+for (let i = 0; i < 10; i++) {
+    let array = [];
+    for (let j = 0; j < 10; j++) {
+        array.push(" ");
+    }
+    matrix.push(array);
+}
+
+const numbers = ["26", "03", "17", "52", "84", "91", "11", "08", "20"];
+
+numbers.forEach(element => {
+    let row = parseInt(element[0]);
+    let column = parseInt(element[1]);
+    matrix[row][column] = "X";
+});
+
+console.log(matrix);
