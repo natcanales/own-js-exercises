@@ -50,7 +50,7 @@
 
              For example, calling the function like this:
 
-                myFunction("HehE", false);
+                myFunction("HehE", true);
 
              would return this object:
 
@@ -63,7 +63,7 @@
 
              and calling the function like this:
 
-                myFunction("HehE", true);
+                myFunction("HehE", false);
 
              would return this object:
             
@@ -73,3 +73,29 @@
                 }
 
 *****************************************************************************/
+
+function countLetters(word, isSensitive = true) {
+    let spell = {};
+
+    if (!isSensitive) {
+        word = word.toLowerCase();
+    }
+
+    for (let i = 0; i < word.length; i++) {        
+        let letter = word[i];
+        if (spell.hasOwnProperty(letter)) {
+            spell[letter]++;
+        } else {
+            spell[letter] = 1;
+        }
+    }
+
+    return spell;
+}
+
+let word = "HehE";
+let spell = countLetters(word);
+
+for (key in spell) {
+    console.log(`The letter ${key} appears ${spell[key]} time(s) in the string "${word}"`);
+}
