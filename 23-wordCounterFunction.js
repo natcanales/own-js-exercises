@@ -115,3 +115,36 @@
                  think about!"
 
 *****************************************************************************/
+
+function separateWords(string, isSensitive = true) {
+    let words;
+    let counter = {};
+
+    string = string.replace(/\,/g, "").replace(/\./g, "")
+    .replace(/\?/g, "").replace(/\(/g, "").replace(/\)/g, "")
+    .replace(/\:/g, "").replace(/\;/g, "").replace(/\!/g, "");
+
+    if (isSensitive) {
+        words = string.split(" ");
+    } else {
+        words = string.toLowerCase().split(" ");
+    }
+
+    words.forEach(word => {
+        if (counter.hasOwnProperty(word)) {
+            counter[word]++;
+        } else {
+            counter[word] = 1;
+        }
+    });
+
+    return counter;
+}
+
+let phrase = `Hey! How are you? Did you know I am going to marry that girl I met years ago? Her name is Natalia (she is 25 years old), and we are already planning how everything is going to be: the wedding day schedule, the decoration... I am excited about it, and very happy to organize quite an important event; although I am a bit stressed because there are many things to think about!`;
+
+let solution = separateWords(phrase);
+
+for (key in solution) {
+    console.log(`The word '${key}' appears ${solution[key]} time(s) in the string "${phrase}"`);
+}
