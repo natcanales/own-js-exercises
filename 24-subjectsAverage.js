@@ -31,3 +31,41 @@
           all the needed results.
 
 *****************************************************************************/
+
+let subjects = {
+    maths: [9, 8.8, 7, 8.5],
+    spanish: [10, 10, 9.5, 9.25],
+    english: [8, 9.5, 8.5, 8.75]
+};
+
+function arrayAverage(numbers) {
+    let totalSum = 0;
+    let numNumbers = 0;
+    let totalAverage;
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (typeof(numbers[i]) === "number") {
+            totalSum += numbers[i];
+            numNumbers++;
+        }
+    }
+    if (numNumbers !== 0) {
+        totalAverage = totalSum / numNumbers;
+    } else {
+        totalAverage = 0;
+    }
+    
+    return totalAverage.toFixed(2);
+}
+
+
+function subjectsAverage(object) {
+    let average = {};
+    for (key in object) {
+        average[key] = arrayAverage(object[key]);
+    }
+
+    return average;
+}
+
+let solution = subjectsAverage(subjects);
